@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:iss_auto_cycle="true"
+        app:iss_delay="1000"
+        app:iss_period="1000"
+        app:iss_text_align="CENTER" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/heading"
+            android:textAlignment="center"
+            android:textColor="#5A5858"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading"
+            android:layout_marginTop="@dimen/m100">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="@dimen/m150"
+                    android:layout_height="@dimen/m40"
+                    android:layout_marginEnd="11dp"
+                    android:src="@drawable/facebook_sign" />
+
+                <ImageView
+                    android:id="@+id/google"
+                    android:layout_width="@dimen/m150"
+                    android:layout_height="@dimen/m40"
+                    android:src="@drawable/google_sign" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/sign_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/images"
+            android:layout_marginTop="@dimen/m50"
+            android:text="@string/sign_phone"
+            android:textAlignment="center"
+            android:textColor="#5A5858"
+            android:textSize="@dimen/text_12" />
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/m30"
+            android:paddingBottom="@dimen/m30"
+            android:text="@string/privacy_policy"
+            android:textAlignment="center"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_11" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

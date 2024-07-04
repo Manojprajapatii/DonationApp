@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".donation.fragment.Help_Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/boldTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="help"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_16" />
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/help_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help_text1"
+            android:textSize="@dimen/text_20"
+            android:layout_marginStart="@dimen/m22"
+            android:layout_marginTop="@dimen/m20"
+            android:textStyle="bold" />
+        <com.demo.donation.view.LightTextView
+            android:id="@+id/help_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help_text2"
+            android:textSize="@dimen/text_12"
+            android:textColor="@color/gray"
+            android:layout_marginStart="@dimen/m22"
+            android:layout_below="@+id/help_text1"
+             />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m350"
+            android:layout_below="@+id/help_text2"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:padding="@dimen/m10"
+            android:rowCount="3">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                app:cardBackgroundColor="@color/blue"
+                android:layout_margin="@dimen/m8"
+                android:layout_marginBottom="@dimen/m50"
+                app:cardCornerRadius="@dimen/m22"
+                app:cardElevation="@dimen/m7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.demo.donation.view.BoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_marginTop="@dimen/m10"
+                        android:textColor="@color/white"
+                        android:text="@string/card_text_1"
+                        android:textSize="@dimen/text_18"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.LightTextView
+                        android:id="@+id/card_text_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/white"
+                        android:text="@string/crad_text_2"
+                        android:textSize="@dimen/text_12"
+                        android:textStyle="bold" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/m45"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/m20"
+                        android:src="@drawable/solidarity" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/m10"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="@dimen/m8"
+                android:layout_marginBottom="@dimen/m50"
+                app:cardCornerRadius="@dimen/m22"
+                app:cardElevation="@dimen/m7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.demo.donation.view.BoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_marginTop="@dimen/m10"
+                        android:text="@string/card2_text_1"
+                        android:textSize="@dimen/text_18"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.LightTextView
+                        android:id="@+id/card2_text_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/crad_text_2"
+                        android:textSize="@dimen/text_12"
+                        android:textStyle="bold"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="@dimen/m45"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_marginTop="@dimen/m20"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/shake_hands"
+                        />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+
+        <GridLayout
+            android:id="@+id/grid2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m350"
+            android:layout_marginTop="@dimen/m300"
+            android:layout_below="@+id/help_text2"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:padding="@dimen/m10"
+            android:rowCount="3">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+
+                android:layout_margin="@dimen/m8"
+                android:layout_marginBottom="@dimen/m50"
+                app:cardCornerRadius="@dimen/m22"
+                app:cardElevation="@dimen/m7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.demo.donation.view.BoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_marginTop="@dimen/m10"
+                        android:text="@string/card3_text_1"
+                        android:textSize="@dimen/text_18"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.LightTextView
+                        android:id="@+id/card3_text_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/crad_text_2"
+                        android:textSize="@dimen/text_12"
+                        android:textStyle="bold" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/m45"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/m15"
+                        android:src="@drawable/help_2" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/m10"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="@dimen/m8"
+                android:layout_marginBottom="@dimen/m50"
+                app:cardCornerRadius="@dimen/m22"
+                app:cardElevation="@dimen/m7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.demo.donation.view.BoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_marginTop="@dimen/m10"
+                        android:text="@string/card4_text_1"
+                        android:textSize="@dimen/text_18"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.LightTextView
+                        android:id="@+id/card4_text_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/crad_text_2"
+                        android:textSize="@dimen/text_12"
+                        android:textStyle="bold" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/m45"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/m12"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/m15"
+                        android:src="@drawable/heart" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+                <Button
+                    android:id="@+id/donate"
+                    android:layout_below="@+id/grid2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/m10"
+                    android:layout_marginEnd="@dimen/m10"
+                    android:layout_marginBottom="100dp"
+                    android:text="@string/btn_donate"
+                    android:textSize="18sp"
+                    android:layout_marginTop="-50dp"
+                    android:backgroundTint="@color/blue"
+                    app:icon="@drawable/heart_btn" />
+
+
+
+    </RelativeLayout>
+</ScrollView>
