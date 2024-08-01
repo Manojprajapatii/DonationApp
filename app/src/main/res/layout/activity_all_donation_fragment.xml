@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".donation.fragment.AllDonation_Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/boldTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/pagetitle"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_16" />
+
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/donate_1"
+            android:layout_width="@dimen/m110"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/m20"
+            android:layout_marginTop="@dimen/m30"
+            android:text="@string/food_donate"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/text_18"
+            android:textStyle="bold" />
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/donate_2"
+            android:layout_width="@dimen/m110"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/m10"
+            android:layout_marginTop="@dimen/m30"
+            android:layout_toRightOf="@+id/donate_1"
+            android:text="@string/tree_donate"
+            android:textSize="@dimen/text_18"
+            android:textStyle="bold" />
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/donate_3"
+            android:layout_width="@dimen/m110"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/m10"
+            android:layout_marginTop="@dimen/m30"
+            android:layout_toRightOf="@+id/donate_2"
+            android:text="@string/loram_ipos"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/text_18"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/donate_3"
+            android:alignmentMode="alignMargins"
+            android:layout_marginBottom="@dimen/m70"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:padding="@dimen/m10"
+            android:rowCount="3">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="@dimen/m8"
+                app:cardCornerRadius="@dimen/m10"
+                app:cardElevation="@dimen/m7">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/Tree_image_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m110"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/food_donation"
+                        android:scaleType="fitXY"
+                        app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card1_heading"
+                        android:layout_width="@dimen/m170"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Tree_image_1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_main_heading"
+                        android:textSize="@dimen/text_13"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card1_sub_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card1_heading"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_sub_heading"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_11"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/card1_sub_heading"
+                        android:layout_marginStart="@dimen/m8"
+                        android:layout_marginEnd="@dimen/m8"
+                        android:layout_centerInParent="true"
+                        android:max="100"
+                        android:progress="75"
+                        android:progressDrawable="@drawable/progress_indeterminate" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/target_dollar"
+                        android:layout_width="@dimen/m100"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/progress_bar"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/target_dollar"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/percentage"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/progress_bar"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:text="@string/percentage"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/donate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m40"
+                        android:layout_below="@+id/percentage"
+                        android:layout_marginStart="@dimen/m7"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:backgroundTint="@color/blue"
+                        android:text="@string/btn_donate"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/m230"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="@dimen/m8"
+                app:cardCornerRadius="@dimen/m10"
+                app:cardElevation="@dimen/m7">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/card2_Tree_image_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m110"
+                        android:layout_margin="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/food_donation"
+                        app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card2_heading"
+                        android:layout_width="@dimen/m160"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card2_Tree_image_1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_main_heading"
+                        android:textSize="@dimen/text_13"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card2_sub_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card2_heading"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_sub_heading"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_11"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/card2_progress_bar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/card2_sub_heading"
+                        android:layout_marginStart="@dimen/m8"
+                        android:layout_marginEnd="@dimen/m8"
+                        android:layout_centerInParent="true"
+                        android:max="100"
+                        android:progress="75"
+                        android:progressDrawable="@drawable/progress_indeterminate" />
+
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card2_target_dollar"
+                        android:layout_width="@dimen/m100"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card2_progress_bar"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/target_dollar"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card2_percentage"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card2_progress_bar"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:text="@string/percentage"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/card2_donate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m40"
+                        android:layout_below="@+id/card2_percentage"
+                        android:layout_marginStart="@dimen/m7"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:backgroundTint="@color/blue"
+                        android:text="@string/btn_donate"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="@dimen/m8"
+                app:cardCornerRadius="@dimen/m10"
+                app:cardElevation="@dimen/m7">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/card3_Tree_image_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m110"
+                        android:layout_margin="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/food_donation"
+                        app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card3_heading"
+                        android:layout_width="@dimen/m160"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card3_Tree_image_1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_main_heading"
+                        android:textSize="@dimen/text_13"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card3_sub_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card3_heading"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_sub_heading"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_11"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/card3_progress_bar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/card3_sub_heading"
+                        android:layout_marginStart="@dimen/m8"
+                        android:layout_marginEnd="@dimen/m8"
+                        android:layout_centerInParent="true"
+                        android:max="100"
+                        android:progress="75"
+                        android:progressDrawable="@drawable/progress_indeterminate" />
+
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card3_target_dollar"
+                        android:layout_width="@dimen/m100"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card3_progress_bar"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/target_dollar"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card3_percentage"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card3_progress_bar"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:text="@string/percentage"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/card3_donate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m40"
+                        android:layout_below="@+id/card3_percentage"
+                        android:layout_marginStart="@dimen/m7"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:backgroundTint="@color/blue"
+                        android:text="@string/btn_donate"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/m230"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="@dimen/m8"
+                app:cardCornerRadius="@dimen/m10"
+                app:cardElevation="@dimen/m7">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/card4_Tree_image_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m110"
+                        android:layout_margin="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/food_donation"
+                        app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card4_heading"
+                        android:layout_width="@dimen/m160"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card4_Tree_image_1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_main_heading"
+                        android:textSize="@dimen/text_13"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card4_sub_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card4_heading"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_sub_heading"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_11"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/card4_progress_bar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/card4_sub_heading"
+                        android:layout_marginStart="@dimen/m8"
+                        android:layout_marginEnd="@dimen/m8"
+                        android:layout_centerInParent="true"
+                        android:max="100"
+                        android:progress="75"
+                        android:progressDrawable="@drawable/progress_indeterminate" />
+
+
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card4_target_dollar"
+                        android:layout_width="@dimen/m100"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card4_progress_bar"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/target_dollar"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card4_percentage"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card4_progress_bar"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:text="@string/percentage"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/card4_donate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m40"
+                        android:layout_below="@+id/card4_percentage"
+                        android:layout_marginStart="@dimen/m7"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:backgroundTint="@color/blue"
+                        android:text="@string/btn_donate"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="@dimen/m8"
+                app:cardCornerRadius="@dimen/m10"
+                app:cardElevation="@dimen/m7">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/card5_Tree_image_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m110"
+                        android:layout_margin="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/food_donation"
+                        app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card5_heading"
+                        android:layout_width="@dimen/m160"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card5_Tree_image_1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_main_heading"
+                        android:textSize="@dimen/text_13"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card5_sub_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card5_heading"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_sub_heading"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_11"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/card5_progress_bar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/card5_sub_heading"
+                        android:layout_marginStart="@dimen/m8"
+                        android:layout_marginEnd="@dimen/m8"
+                        android:layout_centerInParent="true"
+                        android:max="100"
+                        android:progress="75"
+                        android:progressDrawable="@drawable/progress_indeterminate" />
+
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card5_target_dollar"
+                        android:layout_width="@dimen/m100"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card5_progress_bar"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/target_dollar"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/card5_percentage"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card5_progress_bar"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:text="@string/percentage"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/card5_donate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m40"
+                        android:layout_below="@+id/card5_percentage"
+                        android:layout_marginStart="@dimen/m7"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:backgroundTint="@color/blue"
+                        android:text="@string/btn_donate"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/m230"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="@dimen/m8"
+                app:cardCornerRadius="@dimen/m10"
+                app:cardElevation="@dimen/m7">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/Tree6_image_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m110"
+                        android:layout_margin="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/food_donation"
+                        app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/Tree6_card1_heading"
+                        android:layout_width="@dimen/m160"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Tree6_image_1"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_main_heading"
+                        android:textSize="@dimen/text_13"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/Tree6_card1_sub_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Tree6_card1_heading"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/card_sub_heading"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_11"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/Tree6_progress_bar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@+id/Tree6_card1_sub_heading"
+                        android:layout_marginStart="@dimen/m8"
+                        android:layout_marginEnd="@dimen/m8"
+                        android:layout_centerInParent="true"
+                        android:max="100"
+                        android:progress="75"
+                        android:progressDrawable="@drawable/progress_indeterminate" />
+
+
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/Tree6_target_dollar"
+                        android:layout_width="@dimen/m100"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Tree6_progress_bar"
+                        android:layout_marginStart="@dimen/m7"
+                        android:text="@string/target_dollar"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <com.demo.donation.view.BoldTextView
+                        android:id="@+id/Tree6_percentage"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Tree6_progress_bar"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:text="@string/percentage"
+                        android:textColor="@color/gray_3"
+                        android:textSize="@dimen/text_8"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/Tree6_donate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/m40"
+                        android:layout_below="@+id/Tree6_percentage"
+                        android:layout_marginStart="@dimen/m7"
+                        android:layout_marginEnd="@dimen/m7"
+                        android:backgroundTint="@color/blue"
+                        android:text="@string/btn_donate"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

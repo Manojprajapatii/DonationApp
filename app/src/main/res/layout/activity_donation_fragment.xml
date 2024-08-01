@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".donation.fragment.Donation_Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m300"
+            android:src="@drawable/donate_img"
+            android:scaleType="fitXY"/>
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:layout_marginStart="@dimen/m7"
+            android:layout_marginTop="@dimen/m23"
+            android:layout_marginEnd="@dimen/m30"
+            android:text="@string/heading_text"
+            android:textSize="@dimen/m17"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/image"
+            android:layout_marginRight="@dimen/m5"
+            android:layout_marginTop="@dimen/m15">
+
+
+            <ProgressBar
+                android:id="@+id/progressBar_2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/m50"
+                android:layout_height="@dimen/m50"
+                android:progressDrawable="@drawable/progress_round"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/m10"
+                android:max="100"
+                android:progress="70"
+                android:indeterminate="false" />
+
+
+            <TextView
+                android:id="@+id/ViewProgress_2"
+                android:layout_width="@dimen/m30"
+                android:layout_height="@dimen/m30"
+                android:text="70%"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/m28"
+                android:textColor="@color/blue"
+                android:paddingLeft="@dimen/m5"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/dollar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading"
+            android:layout_marginStart="@dimen/m7"
+            android:layout_marginTop="@dimen/m10"
+            android:text="@string/dollar"
+            android:textColor="@color/blue_2"
+            android:textSize="@dimen/m12"
+            android:textStyle="bold" />
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/dollar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading"
+            android:layout_marginStart="@dimen/m60"
+            android:layout_marginTop="@dimen/m10"
+            android:text="@string/sun_heading"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/m12"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m1"
+            android:layout_below="@+id/dollar_title"
+            android:layout_marginStart="@dimen/m10"
+            android:layout_marginTop="@dimen/m8"
+            android:layout_marginEnd="@dimen/m10"
+            android:background="@color/gray" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="@dimen/m50"
+            android:layout_height="@dimen/m50"
+            android:layout_below="@+id/dollar"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginTop="@dimen/m20"
+            android:src="@drawable/profile" />
+
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_1"
+            android:layout_marginStart="@dimen/m5"
+            android:layout_marginTop="@dimen/m25"
+            android:layout_marginEnd="@dimen/m30"
+            android:layout_toRightOf="@+id/profile"
+            android:text="@string/username"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/user_img"
+            android:layout_width="@dimen/m30"
+            android:layout_height="@dimen/m30"
+            android:layout_below="@+id/dollar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/user" />
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/user_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_1"
+            android:layout_marginTop="@dimen/m28"
+            android:layout_toRightOf="@+id/user_img"
+            android:layout_marginEnd="@dimen/m30"
+            android:text="@string/count_user"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/watch"
+            android:layout_width="@dimen/m30"
+            android:layout_height="@dimen/m30"
+            android:layout_below="@+id/dollar"
+            android:layout_toLeftOf="@+id/laft_days"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/watch"
+            app:tint="@color/black" />
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/laft_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_1"
+            android:layout_marginTop="@dimen/m28"
+            android:layout_marginEnd="@dimen/m20"
+            android:layout_marginStart="@dimen/m5"
+            android:layout_alignParentRight="true"
+            android:text="@string/days"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold" />
+
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m1"
+            android:layout_below="@+id/profile"
+            android:layout_marginStart="@dimen/m10"
+            android:layout_marginTop="@dimen/m8"
+            android:layout_marginEnd="@dimen/m10"
+            android:background="@color/gray" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_2"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/m10"
+                android:paddingTop="@dimen/m10">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/s_img1"
+                    android:layout_width="@dimen/m70"
+                    android:layout_height="@dimen/m80"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/tree_donate"
+                    app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/s_img2"
+                    android:layout_width="@dimen/m70"
+                    android:layout_height="@dimen/m80"
+                    android:layout_margin="8dp"
+                    android:layout_toRightOf="@+id/s_img1"
+                    android:src="@drawable/tree_donate"
+                    app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/s_img3"
+                    android:layout_width="@dimen/m70"
+                    android:layout_height="@dimen/m80"
+                    android:layout_margin="8dp"
+                    android:layout_toRightOf="@+id/s_img2"
+                    android:src="@drawable/tree_donate"
+                    app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/s_img4"
+                    android:layout_width="@dimen/m70"
+                    android:layout_height="@dimen/m80"
+                    android:layout_margin="8dp"
+                    android:layout_toRightOf="@+id/s_img3"
+                    android:src="@drawable/tree_donate"
+                    app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/s_img5"
+                    android:layout_width="@dimen/m70"
+                    android:layout_height="@dimen/m80"
+                    android:layout_margin="8dp"
+                    android:layout_toRightOf="@+id/s_img4"
+                    android:src="@drawable/tree_donate"
+                    app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/s_img6"
+                    android:layout_width="@dimen/m70"
+                    android:layout_height="@dimen/m80"
+                    android:layout_margin="8dp"
+                    android:layout_toRightOf="@+id/s_img4"
+                    android:src="@drawable/tree_donate"
+                    app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/s_img7"
+                    android:layout_width="@dimen/m70"
+                    android:layout_height="@dimen/m80"
+                    android:layout_margin="8dp"
+                    android:layout_toRightOf="@+id/s_img4"
+                    android:src="@drawable/tree_donate"
+                    app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/s_img8"
+                    android:layout_width="@dimen/m70"
+                    android:layout_height="@dimen/m80"
+                    android:layout_margin="8dp"
+                    android:layout_toRightOf="@+id/s_img4"
+                    android:src="@drawable/tree_donate"
+                    app:shapeAppearanceOverlay="@style/RoundedCorners" />
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/dummy_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_2"
+            android:layout_marginStart="@dimen/m7"
+            android:layout_marginTop="@dimen/m110"
+            android:text="@string/text_describe"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/m12"
+            android:textStyle="bold" />
+
+        <com.demo.donation.view.BoldTextView
+            android:id="@+id/readmore"
+            android:layout_width="@dimen/m100"
+            android:layout_height="@dimen/m50"
+            android:layout_below="@+id/dummy_text"
+            android:layout_marginStart="@dimen/m10"
+            android:text="@string/readmore"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold"
+
+            />
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m1"
+            android:layout_below="@+id/readmore"
+            android:layout_marginStart="@dimen/m10"
+
+            android:layout_marginEnd="@dimen/m10"
+            android:background="@color/gray" />
+
+        <Button
+            android:id="@+id/donate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/readmore"
+            android:layout_marginStart="@dimen/m10"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginEnd="@dimen/m10"
+            android:layout_marginBottom="100dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/btn_donate"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</ScrollView>

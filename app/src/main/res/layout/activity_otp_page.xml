@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".donation.activity.Otp_page">
+
+    <com.demo.donation.view.BoldTextView
+        android:id="@+id/code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/enter_digit"
+        android:layout_marginLeft="@dimen/m20"
+        android:layout_marginTop="@dimen/m80"
+        android:textSize="@dimen/text_20"
+        android:textStyle="bold"
+        />
+    <com.demo.donation.view.BoldTextView
+        android:id="@+id/otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/number"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/code"
+        android:layout_marginTop="@dimen/m10"
+        android:layout_marginLeft="@dimen/m20"
+        android:textSize="@dimen/text_20"
+        android:textColor="@color/blue_2"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otp"
+        android:id="@+id/super_otp_etner"
+        android:layout_marginTop="@dimen/m20"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/enter_otp1"
+            android:layout_width="@dimen/m40"
+            android:layout_height="@dimen/m50"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/m17"
+            android:layout_marginLeft="@dimen/m25"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="@dimen/text_24"
+            android:textStyle="bold"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/enter_otp2"
+            android:layout_width="@dimen/m40"
+            android:layout_height="@dimen/m50"
+            android:layout_marginRight="@dimen/m17"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="@dimen/text_24"
+            android:textStyle="bold"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/enter_otp3"
+            android:layout_width="@dimen/m40"
+            android:layout_height="@dimen/m50"
+            android:layout_marginRight="@dimen/m17"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="@dimen/text_24"
+            android:textStyle="bold"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/enter_otp4"
+            android:layout_width="@dimen/m40"
+            android:layout_height="@dimen/m50"
+            android:layout_marginRight="@dimen/m17"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="@dimen/text_24"
+            android:textStyle="bold"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/enter_otp5"
+            android:layout_width="@dimen/m40"
+            android:layout_height="@dimen/m50"
+            android:layout_marginRight="@dimen/m17"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="@dimen/text_24"
+            android:textStyle="bold"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/enter_otp6"
+            android:layout_width="@dimen/m40"
+            android:layout_height="@dimen/m50"
+            android:layout_marginRight="@dimen/m25"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="@dimen/text_24"
+            android:textStyle="bold"
+            tools:ignore="LabelFor" />
+    </LinearLayout>
+
+
+    <com.demo.donation.view.BoldTextView
+        android:id="@+id/requestOtpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/super_otp_etner"
+        android:layout_marginTop="@dimen/m40"
+        android:paddingRight="@dimen/m100"
+        android:paddingLeft="@dimen/m40"
+        android:layout_centerHorizontal="true"
+        android:text="@string/requestOtpButton"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/text_16"
+        android:textColor="@color/gray"
+        />
+    <com.demo.donation.view.BoldTextView
+        android:id="@+id/timerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/super_otp_etner"
+        android:layout_marginTop="@dimen/m40"
+        android:paddingLeft="@dimen/m120"
+        android:layout_centerHorizontal="true"
+        android:text="@string/timerTextView"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/text_16"
+        android:textColor="@color/gray"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="@dimen/m200"
+        android:layout_height="@dimen/m50"
+        android:text="@string/btnNext"
+        android:textSize="@dimen/text_18"
+        android:layout_below="@+id/timerTextView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/m30"
+        />
+
+
+
+
+</RelativeLayout>
